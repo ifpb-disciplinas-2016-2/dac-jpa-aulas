@@ -18,6 +18,7 @@ import javax.persistence.TableGenerator;
 //@Table(name = "Povo")
 @SequenceGenerator(name = "minha_seq", 
         allocationSize = 1,
+        initialValue = 1,
         sequenceName = "minha_sequencia")
 
 @TableGenerator(allocationSize = 1, initialValue = 1,
@@ -30,8 +31,8 @@ import javax.persistence.TableGenerator;
 public class Pessoa implements Serializable {
 
     @Id
-    @GeneratedValue(generator = "minha_tab", 
-            strategy = GenerationType.TABLE)
+    @GeneratedValue(generator = "minha_seq", 
+            strategy = GenerationType.SEQUENCE)
     private long id;
     private String nome;
     private String email;

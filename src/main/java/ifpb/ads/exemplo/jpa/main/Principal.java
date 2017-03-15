@@ -18,12 +18,12 @@ public class Principal {
                 createEntityManagerFactory("exemplo-jpa").
                 createEntityManager();
 
-//        Pessoa pessoa = new Pessoa("kiko", "kiko@chaves.com");
+        Pessoa pessoa = new Pessoa("kiko", "kiko@chaves.com");
         Funcionario funcionario = new Funcionario("Chaves");
         EntityTransaction transaction = manager.getTransaction();
         
         transaction.begin();
-        manager.persist(funcionario);
+        manager.persist(pessoa);
         transaction.commit();
 
     }
