@@ -3,15 +3,27 @@
   <persistence-unit name="exemplo-jpa" transaction-type="RESOURCE_LOCAL">
     <!--<provider>org.hibernate.ejb.HibernatePersistence</provider>-->
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <class>ifpb.ads.exemplo.jpa.aula.Pessoa</class>
-    <class>ifpb.ads.exemplo.jpa.aula.Funcionario</class>
+    <class>ifpb.ads.exemplo.jpa.aula.Aluno</class>
+    <class>ifpb.ads.exemplo.jpa.aula.ConvertLocalDate</class>
+    <class>ifpb.ads.exemplo.jpa.aula.ConvertString</class>
+    <class>ifpb.ads.exemplo.jpa.aula.Usuario</class>
+    <class>ifpb.ads.exemplo.jpa.aula.Chefe</class>
+    <class>ifpb.ads.domain.Endereco</class>
+    <class>ifpb.ads.domain.Faculdade</class>
+    <class>ifpb.ads.domain.Funcionario</class>
+    <class>ifpb.ads.domain.Hobby</class>
+    <class>ifpb.ads.domain.Pessoa</class>
+    <class>ifpb.ads.domain.Projeto</class>
+    <class>ifpb.ads.domain.Telefone</class>
+    <class>ifpb.ads.domain.Vaga</class>
     <properties>
       <property name="eclipselink.logging.level" value="FINE"/>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/exemplo-dac"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
       <property name="javax.persistence.jdbc.password" value="12345"/>
-      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <!--<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
+      <!--<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
     </properties>
   </persistence-unit>
 </persistence>
